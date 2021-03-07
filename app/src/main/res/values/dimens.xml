@@ -1,0 +1,7 @@
+<resources>
+    <dimen name="logoAlto">30dp</dimen>
+    <dimen name="logoAncho">60dp</dimen>
+
+    <dimen name="tamanioTitulo">20sp</dimen>
+    <dimen name="tamanioNormal">14sp</dimen>
+</resources>

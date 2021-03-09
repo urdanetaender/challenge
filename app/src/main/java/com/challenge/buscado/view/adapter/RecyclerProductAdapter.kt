@@ -1,8 +1,6 @@
 package com.challenge.buscado.view.adapter
 
-
 import android.content.Intent
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,12 +8,11 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.challenge.buscado.R
-import com.challenge.buscado.model.Product
-import com.challenge.buscado.model.common.Constantes
+import com.challenge.buscado.model.product.Product
+import com.challenge.buscado.common.Constantes
 import com.challenge.buscado.view.ProductActivity
 import com.squareup.picasso.Picasso
 import java.text.DecimalFormat
-
 
 class RecyclerProductAdapter(var products: List<Product?>) :
     RecyclerView.Adapter<RecyclerProductAdapter.ProductHolder>() {
@@ -47,6 +44,7 @@ class RecyclerProductAdapter(var products: List<Product?>) :
         private var tvPrice: TextView = v.findViewById(R.id.tvPriceRVAP)
         private var tvSold: TextView = v.findViewById(R.id.tvSoldRVAP)
         private var tvQuantity: TextView = v.findViewById(R.id.tvQuantityRVAP)
+        private val context = v.context
 
         init {
             v.setOnClickListener(this)
@@ -59,13 +57,12 @@ class RecyclerProductAdapter(var products: List<Product?>) :
             }
             tvTitle.setText(product?.title)
             tvPrice.setText(formatea.format(product?.price))
-            tvSold.setText("Vendidos: ${product?.soldQuantity}")
-            tvQuantity.setText("Disponibles: ${product?.availableQuantity}")
+            tvSold.setText("${context.getString(R.string.vendidos)}: ${product?.soldQuantity}")
+            tvQuantity.setText("${context.getString(R.string.disponibles)}: ${product?.availableQuantity}")
 
         }
 
         override fun onClick(v: View) {
-            Log.i("logcat", "producto: ${product?.title}")
             val context = v.context
             val showPhotoIntent = Intent(v.context, ProductActivity::class.java)
             showPhotoIntent.putExtra("product", product)

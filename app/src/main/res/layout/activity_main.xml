@@ -64,11 +64,20 @@
         android:layout_height="match_parent"
         app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
 
-
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rvMA"
+            android:background="@color/white"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
+
+        <ImageView
+            android:id="@+id/ivBacMA"
+            android:layout_width="200dp"
+            android:layout_height="150dp"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:alpha="0.1"
+            app:srcCompat="@drawable/logo_mercadolibre" />
     </RelativeLayout>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

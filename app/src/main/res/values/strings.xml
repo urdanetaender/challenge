@@ -1,9 +1,30 @@
 <resources>
     <string name="app_name">Buscador MercadoLibre</string>
 
-    <!-- TODO: Main -->
+    <!-- TODO: ProductActivity -->
     <string name="buscar_productos">Buscar productos</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="error">Error</string>
+    <string name="ok">OK</string>
+    <string name="msj_permisos">Debes conceder todos los permisos para garantizar el buen funcionamiento de la aplicación</string>
+
+
+    <!-- TODO: ProductAdapter -->
+    <string name="product_title">Samsung Galaxy A51 128 Gb  Prism Crush White 4 Gb Ram</string>
+    <string name="product_price">$600.000</string>
+    <string name="product_quantity_apater">Disponible: 20</string>
+    <string name="product_sold_apater">Vendidos: 115</string>
+    <string name="vendidos">Vendidos</string>
+    <string name="disponibles">Disponibles</string>
+
+
+    <!-- TODO: ProductActivity -->
+    <string name="product_subtitle">Nuevo | 20 Vendidos</string>
+    <string name="comprar">Comprar</string>
+    <string name="caracteristicas">Características</string>
+    <string name="stock">Stock</string>
+    <string name="no_abrir_url">No se puede abrir la URL. Ingrese una URL válida (https: // ...)</string>
+
+
+
 
 </resources>
